@@ -41,7 +41,7 @@ class App extends React.Component {
         <Button type='button' onClick={() => this.actions.decrement(1)}>Decrement</Button>
         <ChordSelector chord="A"/>
       </div>
-    )
+    );
   }
 }
 

@@ -1,6 +1,6 @@
-import {kea} from 'kea';
-import PropTypes from 'prop-types';
-import {Component} from 'react';
+import {kea} from 'kea'
+import PropTypes from 'prop-types'
+import {Component} from 'react'
 import ChordDropdown from './chord_dropdown'
 
 @kea({
