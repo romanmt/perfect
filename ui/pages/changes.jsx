@@ -12,6 +12,7 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
+import NewCombo from '../components/new_combo_modal.jsx'
 
 @kea({
     actions: () => ({
@@ -29,6 +30,7 @@ class Changes extends Component {
     render() {
         const { classes, combinations } = this.props
         const { addCombination } = this.actions
+        const say = (msg) => {alert(msg)}
         return <div>
             <Paper className={classes.root}>
                 <Table className={classes.table}>
@@ -53,11 +55,7 @@ class Changes extends Component {
                 </Table>
             </Paper>
 
-            <Button variant="outlined"
-                    className={classes.button}
-                    onClick={() => {addCombination(["Amaj", "CMaj", 0, "yesterday"])}}>
-                Add Combination
-            </Button>
+            <NewCombo onOk={addCombination}/>
         </div>
     }
 }

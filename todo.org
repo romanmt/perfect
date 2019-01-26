@@ -1,9 +1,8 @@
-#+TITLE: PERFECT
+#+TITLE: Perfect Project
 #+AUTHOR: Matt Roman
 #+TODO: TODO DOING DONE
 
 * UI Project
-
 ** Chord Changes
 *** DONE get decroator syntax working
 *** DONE create a chord changes page
@@ -15,6 +14,7 @@
 *** TODO create chord changes create page
 *** DONE add material ui
 
+    
 * Data Server
 ** Chord Changes
 *** TODO create combinations route
