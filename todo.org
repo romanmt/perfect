@@ -8,10 +8,10 @@
 *** DONE create a chord changes page
 *** DONE add change list to changes page
 *** DONE hook changes page up to kea
-*** TODO add a new combination modal to changes page
+*** DONE add a new combination modal to changes page
 *** TODO hook chord changes up to data server
 *** TODO make combination loading isomorphic
-*** TODO create chord changes create page
+*** TODO add chord change practice
 *** DONE add material ui
 
     

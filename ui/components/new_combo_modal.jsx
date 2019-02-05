@@ -38,7 +38,9 @@ class NewCombo extends Component {
             open={this.state.open}
             onClose={this.handleClose}
             aria-labelledby="form-dialog-title" >
-            <DialogTitle id="form-dialog-title">Add a new combination</DialogTitle>
+            <DialogTitle id="form-dialog-title">
+                Add a new combination
+            </DialogTitle>
             <DialogContent>
                 <DialogContentText>
                     You will be able to track your practice sessions.
@@ -50,7 +52,9 @@ class NewCombo extends Component {
                     label="A Chord"
                     type="text"
                     value={this.state.achord}
-                    onChange={({target}) => this.setState({achord: target.value})}
+                    onChange={({target}) =>
+                        this.setState({achord: target.value})
+                    }
                 />
                 <TextField
                     autoFocus
@@ -59,7 +63,9 @@ class NewCombo extends Component {
                     label="B Chord"
                     type="text"
                     value={this.state.bchord}
-                    onChange={({target}) => this.setState({bchord: target.value})}
+                    onChange={({target}) =>
+                        this.setState({bchord: target.value})
+                    }
                 />
             </DialogContent>
             <DialogActions>
@@ -71,14 +77,18 @@ class NewCombo extends Component {
                 </Button>
             </DialogActions>
                 </Dialog>
-                <Button variant="outlined" className={classes.button} onClick={this.handleClickOpen}>Add Combination</Button>
+                <Button variant="outlined"
+                        className={classes.button}
+                        onClick={this.handleClickOpen}>
+                    Add Combination
+                </Button>
             </div>
         )
     }
 }
 
 NewCombo.propTypes = {
-    onOk: PropTypes.function
+    onOk: PropTypes.func
 }
 
 const styles = theme => ({
