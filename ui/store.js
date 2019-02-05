@@ -1,8 +1,10 @@
-import { keaReducer } from 'kea';
-import { createStore, compose, combineReducers } from 'redux';
+import { keaReducer, activatePlugin } from 'kea';
+import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
+import sagaPlugin, { keaSaga } from 'kea-saga';
+import createSagaMiddleware from 'redux-saga'
 
 const reducers = combineReducers({
-  kea: keaReducer('kea')
+    kea: keaReducer('kea')
 });
 
 const reduxDevTools =
@@ -11,8 +13,14 @@ const reduxDevTools =
       : f => f;
 
 export const initStore = () => {
-  return createStore(
-    reducers,
-    compose(reduxDevTools)
-  );
+    activatePlugin(sagaPlugin);
+    const sagaMiddleware = createSagaMiddleware();
+    const finalCreateStore = compose(
+        applyMiddleware(sagaMiddleware)
+    )(createStore);
+    const store = finalCreateStore(reducers);
+
+    sagaMiddleware.run(keaSaga);
+
+    return store;
 };

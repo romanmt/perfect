@@ -21,7 +21,10 @@ import NewCombo from '../components/new_combo_modal.jsx'
         combinations: [List(), PropTypes.Array, {
             [actions.addCombination]: (state, payload) => state.push(payload.combination)
         }]
-    })
+    }),
+    start: function * () {
+        console.log("starting the saga")
+    }
 })
 
 class Changes extends Component {
