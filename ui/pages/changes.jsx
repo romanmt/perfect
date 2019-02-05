@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import { initStore } from '../store'
-import withRedux from 'next-redux-wrapper'
 import { kea } from 'kea'
 import { List } from 'immutable'
 import { withStyles } from '@material-ui/core/styles'
@@ -79,4 +78,4 @@ const styles = theme => ({
 })
 
 const styled = withStyles(styles) (Changes)
-export default withRedux(initStore) (styled)
+export default styled

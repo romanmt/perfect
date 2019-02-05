@@ -1,6 +1,4 @@
 import React from 'react'
-import { initStore } from '../store'
-import withRedux from 'next-redux-wrapper'
 import PropTypes from 'prop-types'
 import { kea } from 'kea'
 import { withStyles } from '@material-ui/core/styles'
@@ -45,4 +43,4 @@ class App extends React.Component {
   }
 }
 
-export default withRedux(initStore)(App)
+export default App
